@@ -14,7 +14,7 @@ import br.com.cepep.bilheteria.util.SesssionUtil;
 @ManagedBean
 @ViewScoped
 public class LoginBean {
-
+// Mudando so esta linha
 	private String usuario;
 	private String senha;
 	
@@ -32,7 +32,7 @@ public class LoginBean {
 			FacesMessage msg = new
 					
 			FacesMessage(FacesMessage.SEVERITY_ERROR, "Login"
-					, "Usu·rio ou senha inv·lidos");
+					, "Usu√°rio ou senha inv√°lidos");
 			
 			FacesContext.getCurrentInstance().addMessage(null, msg);
 			return Page.LOGIN.getDescription();
