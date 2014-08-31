@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Login | Bilheteria Web</title>
+<link rel="shortcut icon" type="image/x-icon" href="#{resource['css/img/favicon.ico']}" />
+<h:outputStylesheet library="css" name="bilheteria.css" />
+</h:head>
+<h:body>
+	<p:dialog header="Bilheteria Web - Login" 
+	resizable="false" visible="true" closable="false" draggable="true">
+		<h:form id="login-form">
+			<p:growl id="growl" sticky="true" showDetail="true" life="3000" />
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputLabel value="Usuário" />
+				<p:inputText id="login" value="#{loginBean.usuario}" required="true" label="Usuário"/>
+				<h:outputLabel value="Senha"/>
+				<p:inputText id="senha" value="#{loginBean.senha}" required="true" type="password" label="Senha"/>
+				<h:outputLink>Esqueci minha senha</h:outputLink>
+				<p:commandButton value="Entrar" update=":login-form" action="#{loginBean.autenticar}" style="width:100% !important" />
+			</h:panelGrid>
+		</h:form>
+	</p:dialog>
+</h:body>
+</html>

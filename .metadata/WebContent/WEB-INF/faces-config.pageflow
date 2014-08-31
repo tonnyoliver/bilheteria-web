@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14076800145550" configfile="/bilheteria-web/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" id="pf14094921302760" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14094921302761 pf14094940346483" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/admin.xhtml" id="pf14094921302762" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14094921302761" path="/app/admin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="app/bilheteria.xhtml" id="pf14094940346484" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14094940346483" path="/app/bilheteria.xhtml"/>
+  <links id="pf14094921302761" target="pf14094921302762" source="pf14094921302760" outcome="admin.xhtml" redirect="true"/>
+  <links id="pf14094940346483" target="pf14094940346484" source="pf14094921302760" outcome="bilheteria.xhtml" redirect="true"/>
+</pageflow:Pageflow>
